@@ -1,0 +1,12 @@
+<h1>
+    Using NgDompurifyDomSanitizer
+</h1>
+<section>
+    <label>
+        Enter HTML here:
+        <textarea [(ngModel)]="value"></textarea>
+    </label>
+    <h2>Resulting value processed with DomSanitizer.sanitize(SecurityContext.HTML, value):</h2>
+    <blockquote [textContent]="sanitizeHTML(value)"></blockquote>
+    <div [innerHTML]="value"></div>
+</section>
